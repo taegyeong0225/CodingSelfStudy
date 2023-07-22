@@ -8,10 +8,10 @@
 // 3. 암스트롱 수면 출력한다.
 for(let i = 100; i <= 999; i++) {
     let i_first = parseInt(i / 100);
-    let i_second = parseInt((i - i_first*100) / 10);
+    let i_second = parseInt((i - i_first*100) / 10); // 100으로 나눈 나머지 / 10 도 가능
     let i_third = i - i_first*100 - i_second * 10;
     if( i == i_first**3 + i_second**3 + i_third**3 ) 
         console.log(i);
     else
-        continue;
+        continue;   
 }
