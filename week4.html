@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4week</title>
+    <style>
+        #title {
+            background-color: aqua;
+        }
+        .styleSet1 {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="printInfo()"> window 객체 속성 </button>
+    <script>
+        function printInfo() {
+            console.log(`웹 브라우저의 너비: ${window.innerWidth}`);
+            console.log(`웹 브라우저의 높이: ${window.innerHeight}`);
+        }
+    </script>
+    <button onclick="popup()"> 팝업 </button>
+    <script>
+        function popup() {
+            window.open('day1.html', '팝업', 'width=200 height=100');
+        }
+    </script>
+    <p id="title"> Hello, <span style="display: none">Javascript</span></p>
+    <script>
+        const pEl = document.getElementById("title");
+        // document.querySelecter("p")
+        // document.getElementName("p")[0]; 유사배열
+
+        pEl.textContent = ' hello, new Content ';
+        pEl.innerText = ' hello, new Content ';
+        pEl.innerHTML = ' hello, new Content ';
+
+        console.log(pEl.textContent); // 텍스트만 가져옴, Hello, Javascript,,, 더 먼저 나옴->호환성 측면에서 더 좋다. 공백 보존
+        console.log(pEl.innerHTML); // 태그를 포함한 모든 노드를 가져옴 , 공백 보존 안 함
+        console.log(pEl.innerText); // 사용자 눈에 보이는 것을 가져옴, Hello
+
+        document.querySelector("#title").textContent += '!!!';
+        pEl.classList.add("styleSet1"); // toggle도 있음
+        // pEl.setAttribute("href", "https://www.naver.com"); 이런식으로 할당도 가능 
+        const pEl2 =document.getElementById("text");
+        pEl2.style.color = 'rgb(0, 0, 255)';
+    </script>
+    
+
+    <button data-cnt="10"> 가방 구매 </button> // cnt라는 사용자 정의 객체
+    <button data-cnt="0"> 신발 구매 </button>
+    <script>
+        const buttonEls = document.querySelectorAll("button");
+        console.log(buttonEls); // nodeList 타입으로 두 개가 출력됨
+
+        buttonEls.forEach((el)=>{
+            el.dataset.snt = 50; // 사용자 정의 속성 불러올 때
+        })
+    </script>
+
+    <script>
+        // 12.4 노드 추가 & 삭제 p.479
+        const nodeAdd = document.createElement("a") // a 노드 생성
+        const textNode = document.createTextNode("링크") // 텍스트 노드 생성
+        const addHref = document.createAttribute("href") // 속성 생성
+
+        addHref.value = "www.naver.com";
+        nodeAdd.appendChild(textNode); // 자식 노드에 연결
+        document.body.appendChild(nodeAdd); 
+        nodeAdd.setAttributeNode(addHref);
+
+        // 삭제 : [부모노드].removechild([자식노드]) + 쿼리 셀렉터로 여러개 삭제 or 모든 요소 찾아서 IF문으로 삭제
+        // 모든 요소에 접근
+        // [노드이름].forEach([요소]) => {[문장]});
+    </script>
+
+</body> 
+</html>
