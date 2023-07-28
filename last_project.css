@@ -1,0 +1,439 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+a, a:link, a:visited{
+    color: inherit;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.content{
+    width: 1140px;
+    margin: 0 auto;
+}
+/* 헤더 영역 */
+header{
+    position: fixed;
+    color:white;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 1rem;
+    /* background-color: rgb(255, 160, 160); */
+}
+header.active{
+    background-color: rgba(255, 160, 160);
+    animation:fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+header .content{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    width:100%;
+}
+header nav ul{
+    display: flex;
+}
+header nav ul li{
+    padding:10px;
+}
+header button{
+    color: white;
+    background:transparent;
+    border: 0;
+    cursor:pointer;
+}
+
+header h1 button{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header nav ul li button{
+    font-size: 1.2rem;
+    color: white;
+}
+main{
+    width: 100%;
+    height: 100vh;
+    color:white;
+    background:linear-gradient(rgba(255, 109, 109, 0.8), rgba(255, 109, 109, 0.8)), url('https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/cnoC/image/UNpQiv0ypQYQsQ9qGlh2Rg15PrM.jpg') center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+main h4{
+    font-size: 2rem;
+
+}
+main h2{
+    font-size: 3.5rem;
+    margin: 2rem 0;
+    letter-spacing: 3px;
+    font-family:"Varela Round", sans-serif;
+}
+main p{
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 1.25rem;
+}
+main button.download{
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 20px;
+    padding: 1rem 2rem;
+    margin-top: 3rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+main button.mouse{
+    background-color: transparent;
+    border:none;
+    color:white;
+    font-size:2rem;
+    position: absolute;
+    bottom: 1rem;
+    left:50%;
+    transform: translate(-50%);
+    animation: upDown 1s ease-in-out infinite;
+    cursor: pointer;
+}
+@keyframes upDown{
+    0%{
+        bottom: 1rem;
+    }
+    50%{
+        bottom:1.5rem;
+    }
+    100%{
+        bottom: 1rem;
+    }
+}
+main h2 span::after{
+    content:"";
+    height: 40px;
+    width: 3px;
+    background-color: #fff;
+    display:inline-block;
+    animation: blink .7s ease-in-out infinite;
+}
+@keyframes blink {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+section{
+    font-family: "Poppins", sans-serif;
+    padding:5rem 0;
+}
+section:nth-child(2n){
+    background-color: #f8f8f8;
+}
+section .title{
+    margin-bottom: 3rem;
+}
+section .title h4{
+    font-size:1.35rem;
+    color:#ed4848;
+    position:relative;
+}
+section .title h2{
+    font-size: 3.5rem;
+}
+
+section .title p{
+    font-size: 1.15rem;
+}
+section .about-self::after{
+    content:"";
+    clear: both;
+    display:block;
+}
+section .about-self .left{
+    width:50%;
+    float:left;
+}
+section .about-self .left img{
+    max-width:100%;
+}
+section .about-self .right{
+    width:50%;
+    float:left;
+    padding:0 2rem;
+}
+section .about-self .right{
+    font-size:2.25rem;
+    margin-bottom: 1rem;
+}
+section .about-self .right h3 strong{
+    color:#ed4848;
+}
+section .about-self .right p{
+    font-size:1.15rem;
+    margin: 1rem 0;
+}
+section .about-self .right .social a{
+    font-size:2.5rem;
+    margin-bottom: 0.2rem;
+}
+section .do-me .do-inner{
+    background-color:#fff;
+    width:30%;
+    padding:2rem; 
+    float:left;
+    margin-right:5%;
+    cursor:pointer;
+
+    margin-bottom: 10%;
+  }
+
+section .do-me .do-inner:last-child{
+    margin-right:0;
+}
+section .do-me::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+section .do-me .do-inner{
+    background-color: #ffe2e2;
+    width:30%;
+    padding:2rem;
+    float:left;
+    margin-right:5%;
+    cursor:pointer;
+}
+section .do-me .do-inner:last-child{
+    margin-right:0;
+}
+section .do-me .do-inner .icon i{
+    font-size: 2.5rem;
+    color: #ff6a6a;
+}
+section .do-me .do-inner .content h3{
+    font-size:2rem;
+    margin:1rem 0;
+  }
+section .do-me .do-inner .content p{
+    font-size: 1.15rem;
+}
+section .do-me .do-inner:hover{
+    background-color: lightcoral;
+    color:white;
+}
+section .do-me .do-inner:hover i{
+    color: white;
+}
+.bg{
+    background:url('https://png.pngtree.com/thumb_back/fh260/background/20210619/pngtree-blue-pink-simple-horizontal-gradient-background-image_729232.jpg') center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height:650px;
+}
+section.portpolio::after{
+    content:"";
+    display: block;
+    clear:both;
+}
+section.portpolio .portpolio-inner{
+    width:30%;
+    margin-right:5%;
+    padding:1rem 1rem 1.5rem 1rem;
+    float:left;
+    background-color: #f8f8f8;
+    border:1px solid #ccc;
+    margin-bottom: 3rem;
+}
+section.portpolio .portpolio-inner:nth-child(3n){
+    margin-right: 0;
+}
+section.portpolio .portpolio-inner img{
+    width:100%;
+    display:block;
+}
+section.portpolio .portpolio-inner strong{
+    color:#ff6a6a;
+    margin:0.5rem 0;
+    display:block;
+}
+section.portpolio .portpolio-inner h3{
+    font-size:1.75rem;
+}
+/* contact */
+section.contact .contact-me::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+section.contact .contact-me .left{
+    width:30%;
+    float:left;
+}
+section.contact .contact-me .right{
+    float: left;
+    width: 65%;
+    margin-left: 5%;
+    margin-bottom:2rem;
+    border:1px solid #ccc;
+    padding: 1rem;
+}
+section.contact .contact-me .left .card{
+    border: 1px solid #ccc;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+section.contact .contact-me .left .card i{
+    margin: 2rem;
+    margin-right:15px;
+}
+section.contact .contact-me .right .form-group{
+    margin-bottom:1.25rem;
+}
+section.contact .contact-me .right .form-group label{
+    display: block;
+    margin-bottom:0.85rem;
+}
+section.contact .contact-me .right input{
+    padding:0.625rem;
+    width:100%;
+    outline:none;
+    border:1px solid #ccc;
+    border-radius: 10px;
+}
+section.contact .contact-me .right input:focus{
+    border:1px solid #719ECE;
+    box-shadow: 0 0 10px #719ECE;
+}
+section.contact .contact-me .right textarea{
+    height:300px;
+    width:100%;
+    resize:none;
+    border:1px solid #ccc;
+    border-radius: 10px;
+}
+section.contact .contact-me .right textarea:focus{
+    outline: none;
+    border:1px solid #719ECE;
+    box-shadow: 0 0 10px #719ECE;
+}
+section.contact .contact-me .right button{
+    width:100%;
+    padding:1rem;
+    background-color: #f78b00;
+    border:none;
+    color: white;
+}
+/* 미디어 쿼리 적용 */
+@media screen and (max-width:1140px){
+    main .content{
+        width:992px;
+    }
+    section .content{
+        width:600px;
+    }
+    section .about-self .left{
+        width:100%;
+        margin-bottom: 1.5rem;
+    }
+    section .about-self .right{
+        width:100%;
+        padding:0;
+    }
+    section .do-me .do-inner{
+        width:48%;
+        margin-bottom: 1.5rem;
+        margin-right: 0;
+    }
+    section .do-me .do-inner:nth-child(2n+1){
+        margin-right: 4%;
+    }
+    section .portpolio-me .portpolio-inner{
+        width:48%;
+        margin-right: 0;
+    }
+    section .portpolio-me .portpolio-inner:nth-child(2n+1){
+        margin-right: 4%;
+
+    }
+    section.contact .contact-me .left{
+        width:100%;
+    }
+    section.contact .contact-me .right{
+        width:100%;
+        margin-left: 0;
+    }
+}
+@media screen and (max-width:992px){
+    html{
+        font-size:14px;
+    }
+    main .content{
+        width:768px;
+    }
+    section .portpolio-me .portpolio-inner{
+        width:100%;
+    }
+}
+@media screen and (max-width:768px){
+    html{
+        font-size:13px;
+    }
+    main .content{
+        width: 576px;
+    }
+    section .content{
+        width:400px;
+    }
+    section .do-me .do-inner{
+        width:100%;
+        margin-right: 0;
+    }
+}
+@media screen and (max-width:576px){
+    html{
+        font-size:12px;
+    }
+    main .content{
+        width:400px;
+    }
+    section .content{
+        width:360px;
+    }
+}
+@media screen and (max-width:400px){
+    html{
+        font-size:11px;
+    }
+    main .centent{
+        width:320px;
+    }
+    section .centent{
+        width:320px;
+    }
+    main h4{
+        font-size:1.5rem;
+    }
+    section .title h2{
+        font-size:3rem;
+    }
+}
