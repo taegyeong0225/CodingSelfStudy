@@ -1,0 +1,57 @@
+fieldset {
+    width: 304px;
+    height: 390px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+}
+input {
+    display: block;
+    margin-bottom: 1rem;
+    border-color: transparent;
+    background-color: rgb(224, 224, 224);
+    margin: 20px;
+
+    height: 44px;
+    width: 228px;
+}
+button {
+    margin: 20px;
+    height: 44px;
+
+    width: 228px;
+}
+label{
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid #2C3432;
+    height: 44px;
+    width: 228px;
+    text-align: center;
+    margin-top: 28px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.googlelogin img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+button.login{
+    background-color: black;
+    color: #ffffff;
+}
+.googlelogin a {
+    display: inline-block;
+    vertical-align: middle;
+}
+a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #2C3432;
+}

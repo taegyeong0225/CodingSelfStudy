@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 126p week2_self2 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 로그인 화면 UI 만들기 </title>
+    <link rel="stylesheet" href="login_ui.css">
+</head>
+<body>
+    <form>
+        <fieldset>
+            <label class="googlelogin">
+                <img src="data:image/png;base64,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" width="20" height="20">
+                <a>Log in with Google</a>
+            </label>
+            
+            
+            <p> or </p>
+            <input type="text" placeholder="Username"/>
+            <input type="text" placeholder="Password"/>
+            <button class="login"> LOGIN </button>
+            <a href="#"> Forget your password? </a>
+        </fieldset>
+    </form>
+</body>
+</html>

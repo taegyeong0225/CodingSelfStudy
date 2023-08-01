@@ -1,0 +1,19 @@
+#postit {
+    background-color: #ffff99;
+    margin: 2rem;
+    padding: 18px;
+    display: inline-block;
+    transform-origin: left;
+    transform: rotate(10deg);
+    text-align: center;
+}
+h1 {
+    font-size:  44px;
+    font-family: 'nanum pen', Courier, monospace;
+    margin-bottom: 20px;
+}
+p {
+    font-size:  25px;
+    font-family: 'nanum pen', Courier, monospace;
+    margin-bottom: 20px;
+}
